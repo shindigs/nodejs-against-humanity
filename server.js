@@ -40,6 +40,8 @@ var lobbySocket = io
         socket.emit('lobbyJoin', gameList);
     })
 
+io.set('log level', 1);
+
 io.sockets.on('connection', function(socket) {
     socketCount+=1;
     console.info('*****SocketCount: ' + socketCount);
